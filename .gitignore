@@ -1,0 +1,6 @@
+.lake/
+.verification/
+__pycache__/
+*.py[cod]
+*.olean
+*.ilean
