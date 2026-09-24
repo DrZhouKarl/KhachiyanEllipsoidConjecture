@@ -1,8 +1,8 @@
-# Khachiyan's Conjecture of Inscribed-Ellipsoid Cutting Inequality: Mathematical Specification and Complete Proof
+# Khachiyan's Inscribed-Ellipsoid Cutting Inequality: Mathematical Specification and Complete Proof
 
 ## 0. Definitions
 
-Fix an integer $n\ge1$. Work in $\mathbb R^n$ with its standard inner product and Euclidean norm. Let $\mathop{\mathrm{vol}}_n$ denote Lebesgue volume, $B_n=\{x:\|x\|\le1\}$, and $\kappa_n=\mathop{\mathrm{vol}}_n(B_n)\in(0,\infty)$.
+Fix an integer $n\ge1$. Work in $\mathbb R^n$ with its standard inner product and Euclidean norm. Let $\mathrm{vol}_n$ denote Lebesgue volume, $B_n=\{x:\|x\|\le1\}$, and $\kappa_n=\mathrm{vol}_n(B_n)\in(0,\infty)$.
 
 A convex body is a compact convex set with nonempty interior. For a real symmetric positive definite matrix $A$ and a vector $a\in\mathbb R^n$, define
 
@@ -10,10 +10,10 @@ $$
 \mathcal E(a,A)=a+AB_n.
 $$
 
-Write $X\preceq Y$ when $Y-X$ is positive semidefinite. If $X=U\mathop{\mathrm{diag}}(\lambda_i)U^{\mathsf T}\succ0$, define, for $p\in\mathbb R$,
+Write $X\preceq Y$ when $Y-X$ is positive semidefinite. If $X=U\,\mathrm{diag}(\lambda_i)U^{\mathsf T}\succ0$, define, for $p\in\mathbb R$,
 
 $$
-X^p=U\mathop{\mathrm{diag}}(\lambda_i^p)U^{\mathsf T}.
+X^p=U\,\mathrm{diag}(\lambda_i^p)U^{\mathsf T}.
 $$
 
 For positive semidefinite matrices, use the same definition when $p>0$, with the convention $0^p=0$.
@@ -21,7 +21,7 @@ For positive semidefinite matrices, use the same definition when $p>0$, with the
 For a convex body $K$, define
 
 $$
-w(K)=\max\{\mathop{\mathrm{vol}}_n(\mathcal E(a,A)):
+w(K)=\max\{\mathrm{vol}_n(\mathcal E(a,A)):
 A=A^{\mathsf T}\succ0,\ \mathcal E(a,A)\subset K\}.
 $$
 
@@ -60,7 +60,7 @@ $$
 For $A\succ0$,
 
 $$
-\mathop{\mathrm{vol}}_n(\mathcal E(a,A))=\kappa_n\det A,
+\mathrm{vol}_n(\mathcal E(a,A))=\kappa_n\det A,
 \qquad h_{\mathcal E(a,A)}(v)=v^{\mathsf T}a+\|Av\|.
 $$
 
@@ -115,7 +115,7 @@ The inequality also holds for $v=0$. G01 now gives the required containment.
 
 ### G03: Existence and uniqueness of the maximum-volume inscribed ellipsoid
 
-Temporarily allow positive semidefinite shape matrices $A\succeq0$. Feasibility implies $a\in K$ and $a\pm Au\in K$, so $2\|Au\|\le\mathop{\mathrm{diam}}K$ for every unit vector $u$. Thus the feasible parameter set is bounded. Containment and positive semidefiniteness are preserved under limits, so this set is closed and hence compact. The continuous function $\det A$ attains a maximum. Since $K$ contains a ball of positive radius, the maximum is positive, and every maximizing matrix is positive definite.
+Temporarily allow positive semidefinite shape matrices $A\succeq0$. Feasibility implies $a\in K$ and $a\pm Au\in K$, so $2\|Au\|\le\mathrm{diam}\,K$ for every unit vector $u$. Thus the feasible parameter set is bounded. Containment and positive semidefiniteness are preserved under limits, so this set is closed and hence compact. The continuous function $\det A$ attains a maximum. Since $K$ contains a ball of positive radius, the maximum is positive, and every maximizing matrix is positive definite.
 
 The feasible parameter set is convex: for $y\in B_n$,
 
@@ -141,7 +141,7 @@ If the centers differ, affine normalization gives two maximizing ellipsoids $B_n
 The affine map $x\mapsto S_*^{-1}(x-a_*)$ sends $J(K)=a_*+S_*B_n$ to $B_n$. For a candidate ellipsoid $E=\mathcal E(a,A)$ in the normalized coordinates, its volume relative to the unit ball is $\det A$, and
 
 $$
-0\notin\mathop{\mathrm{int}}E\quad\Longleftrightarrow\quad\|A^{-1}a\|\ge1.
+0\notin\mathrm{int}\,E\quad\Longleftrightarrow\quad\|A^{-1}a\|\ge1.
 $$
 
 Indeed, the unique solution of $0=a+Ay$ is $y=-A^{-1}a$. A nondegenerate ellipsoid contained in the halfspace $p^{\mathsf T}x\ge0$ cannot contain $0$ in its interior.
@@ -157,7 +157,7 @@ Thus the center-exclusion formulation is equivalent to the formulation using hal
 
 ### G05: Necessary trace condition
 
-If $J(K)=B_n$ and $\mathcal E(b,S)\subset K$, with $S\succ0$, then $\mathop{\mathrm{tr}}S\le n$.
+If $J(K)=B_n$ and $\mathcal E(b,S)\subset K$, with $S\succ0$, then $\mathrm{tr}\,S\le n$.
 
 **Proof.** For $y\in B_n$, convexity gives $(1-t)y+t(b+Sy)\in K$. Consequently,
 
@@ -165,7 +165,7 @@ $$
 tb+((1-t)I+tS)B_n\subset K\quad(0\le t\le1).
 $$
 
-Therefore $\log\det((1-t)I+tS)\le0$, with equality at $t=0$. Taking the right derivative yields $\mathop{\mathrm{tr}}(S-I)\le0$. This derivative can also be computed directly by diagonalizing $S$ and differentiating $\sum_i\log(1+t(\lambda_i-1))$.
+Therefore $\log\det((1-t)I+tS)\le0$, with equality at $t=0$. Taking the right derivative yields $\mathrm{tr}(S-I)\le0$. This derivative can also be computed directly by diagonalizing $S$ and differentiating $\sum_i\log(1+t(\lambda_i-1))$.
 
 ## 3. Matrix analysis
 
@@ -175,7 +175,7 @@ For $A\succ0$, write its eigenvalues as $\lambda_i>0$ and put $\alpha=\min_i\lam
 
 $$
 \det A=\prod_i\lambda_i,\qquad
-\mathop{\mathrm{tr}}(A^p)=\sum_i\lambda_i^p,
+\mathrm{tr}(A^p)=\sum_i\lambda_i^p,
 \qquad A\preceq A^2/\alpha.
 $$
 
@@ -185,7 +185,7 @@ $$
 u^{\mathsf T}A^{2p}u\ge\alpha^{2p}.
 $$
 
-These statements follow coordinatewise in an orthonormal eigenbasis of $A$. If $X\preceq Y$, then $\mathop{\mathrm{tr}}X\le\mathop{\mathrm{tr}}Y$, since the diagonal entries of the positive semidefinite matrix $Y-X$ are nonnegative.
+These statements follow coordinatewise in an orthonormal eigenbasis of $A$. If $X\preceq Y$, then $\mathrm{tr}\,X\le\mathrm{tr}\,Y$, since the diagonal entries of the positive semidefinite matrix $Y-X$ are nonnegative.
 
 ### M02: Order properties of inverses and fractional powers
 
@@ -223,15 +223,15 @@ In particular, the square root preserves matrix order.
 Let $X\succ0$, $H=H^{\mathsf T}$, and $0<p<1$. At $t=0$,
 
 $$
-\frac d{dt}\mathop{\mathrm{tr}}((X+tH)^p)
-=p\mathop{\mathrm{tr}}(X^{p-1}H).
+\frac d{dt}\,\mathrm{tr}((X+tH)^p)
+=p\,\mathrm{tr}(X^{p-1}H).
 $$
 
 **Proof.** The matrix $X+tH$ remains positive definite in a neighborhood of zero. Matrix inversion is differentiable on the invertible matrices, as its entries are rational functions expressed using the adjugate and determinant. Put $R_s=(X+sI)^{-1}$. Taking the trace in (M02.1) and differentiating yields
 
 $$
-D[\mathop{\mathrm{tr}}(X^p)](H)
-=c_p\int_0^\infty s^p\mathop{\mathrm{tr}}(R_s^2H)\,ds.
+D[\mathrm{tr}(X^p)](H)
+=c_p\int_0^\infty s^p\,\mathrm{tr}(R_s^2H)\,ds.
 $$
 
 Differentiation under the integral is justified as follows. In a positive definite neighborhood of $X$ within the self-adjoint matrices, the norm of the differentiated integrand is bounded by $Cs^p$ near zero and by $Cs^{p-2}$ at infinity. Both bounds are integrable. In an eigenbasis of $X$, integration by parts gives
@@ -254,7 +254,7 @@ $$
 then, for every $0<p<1$ and $t\ge0$,
 
 $$
-\mathop{\mathrm{tr}}((M+tbb^{\mathsf T})^p)-\mathop{\mathrm{tr}}(M^p)
+\mathrm{tr}((M+tbb^{\mathsf T})^p)-\mathrm{tr}(M^p)
 \ge(m+t\alpha^2)^p-m^p.
 \tag{M04.1}
 $$
@@ -275,7 +275,7 @@ b^{\mathsf T}(M+sbb^{\mathsf T})^{p-1}b
 \end{aligned}
 $$
 
-By M03, multiplying the left side by $p$ gives the derivative of $\mathop{\mathrm{tr}}((M+sbb^{\mathsf T})^p)$. Integration over $[0,t]$ proves (M04.1).
+By M03, multiplying the left side by $p$ gives the derivative of $\mathrm{tr}((M+sbb^{\mathsf T})^p)$. Integration over $[0,t]$ proves (M04.1).
 
 If $u$ is a unit eigenvector of $A$ corresponding to $\alpha$ and $M=(m/\alpha^2)A^2$, the perturbation changes only the eigenvalue $m$ in that direction. Equality therefore holds in (M04.1).
 
@@ -284,23 +284,23 @@ If $u$ is a unit eigenvector of $A$ corresponding to $\alpha$ and $M=(m/\alpha^2
 If $0\prec X\preceq Y$, $H\succeq0$, and $0<p<1$, then
 
 $$
-\mathop{\mathrm{tr}}((X+H)^p)-\mathop{\mathrm{tr}}(X^p)
-\ge\mathop{\mathrm{tr}}((Y+H)^p)-\mathop{\mathrm{tr}}(Y^p).
+\mathrm{tr}((X+H)^p)-\mathrm{tr}(X^p)
+\ge\mathrm{tr}((Y+H)^p)-\mathrm{tr}(Y^p).
 $$
 
 Put $Z=Y-X\succeq0$ and apply M03 to
 
 $$
-g(t)=\mathop{\mathrm{tr}}((X+tZ+H)^p)-\mathop{\mathrm{tr}}((X+tZ)^p)
+g(t)=\mathrm{tr}((X+tZ+H)^p)-\mathrm{tr}((X+tZ)^p)
 $$
 
-By M02, the derivative is $p$ times the trace of a negative semidefinite matrix multiplied by $Z$, and is therefore nonpositive. Indeed, if $W\preceq0$ and $Z\succeq0$, then $\mathop{\mathrm{tr}}(WZ)=\mathop{\mathrm{tr}}(Z^{1/2}WZ^{1/2})\le0$. Integration gives the conclusion.
+By M02, the derivative is $p$ times the trace of a negative semidefinite matrix multiplied by $Z$, and is therefore nonpositive. Indeed, if $W\preceq0$ and $Z\succeq0$, then $\mathrm{tr}(WZ)=\mathrm{tr}(Z^{1/2}WZ^{1/2})\le0$. Integration gives the conclusion.
 
 Equivalently, for $U,V,W\succeq0$,
 
 $$
-\mathop{\mathrm{tr}}((U+V+W)^p)+\mathop{\mathrm{tr}}(W^p)
-\le\mathop{\mathrm{tr}}((U+W)^p)+\mathop{\mathrm{tr}}((V+W)^p).
+\mathrm{tr}((U+V+W)^p)+\mathrm{tr}(W^p)
+\le\mathrm{tr}((U+W)^p)+\mathrm{tr}((V+W)^p).
 $$
 
 First take $X=W$, $Y=V+W$, and $H=U$ when $W\succ0$. Then replace $W$ by $W+\varepsilon I$ and let $\varepsilon\downarrow0$, using continuity.
@@ -316,7 +316,7 @@ By G02 and G05,
 $$
 T_1=(A+aa^{\mathsf T}/4)^{1/2},\qquad
 T_2=(T_1+aa^{\mathsf T}/16)^{1/2},\qquad
-\mathop{\mathrm{tr}}T_1,\mathop{\mathrm{tr}}T_2\le n.
+\mathrm{tr}\,T_1,\mathrm{tr}\,T_2\le n.
 $$
 
 The corresponding centers are $a/2$ and $a/4$, respectively. Set $u=\rho^{-1}A^{-1}a$ and $b=Au=\rho^{-1}a$, and define
@@ -326,7 +326,7 @@ M_1=(A+bb^{\mathsf T}/4)^{1/2},\qquad
 M_2=(M_1+bb^{\mathsf T}/16)^{1/2}.
 $$
 
-Since $bb^{\mathsf T}\preceq aa^{\mathsf T}$, M02 gives $M_j\preceq T_j$, hence $\mathop{\mathrm{tr}}M_j\le n$.
+Since $bb^{\mathsf T}\preceq aa^{\mathsf T}$, M02 gives $M_j\preceq T_j$, hence $\mathrm{tr}\,M_j\le n$.
 
 Define
 
@@ -338,7 +338,7 @@ $$
 Apply M04 with $(M,m,p,t)=(A,\alpha,1/2,1/4)$. Since $A\preceq A^2/\alpha$, this yields
 
 $$
-\mathop{\mathrm{tr}}M_1\ge\mathop{\mathrm{tr}}(A^{1/2})+f_1(\alpha)-\alpha^{1/2}.
+\mathrm{tr}\,M_1\ge\mathrm{tr}(A^{1/2})+f_1(\alpha)-\alpha^{1/2}.
 $$
 
 Moreover,
@@ -352,19 +352,19 @@ $$
 Applying M04 with $(M,m,p,t)=(A,\alpha,1/4,1/4)$ and $(M_1,f_1(\alpha),1/2,1/16)$, respectively, gives
 
 $$
-\mathop{\mathrm{tr}}(M_1^{1/2})-\mathop{\mathrm{tr}}(A^{1/4})
+\mathrm{tr}(M_1^{1/2})-\mathrm{tr}(A^{1/4})
 \ge f_1(\alpha)^{1/2}-\alpha^{1/4},
 $$
 
 $$
-\mathop{\mathrm{tr}}M_2-\mathop{\mathrm{tr}}(M_1^{1/2})
+\mathrm{tr}\,M_2-\mathrm{tr}(M_1^{1/2})
 \ge f_2(\alpha)-f_1(\alpha)^{1/2}.
 $$
 
 Adding these inequalities cancels the intermediate terms, so
 
 $$
-\mathop{\mathrm{tr}}M_2\ge\mathop{\mathrm{tr}}(A^{1/4})+f_2(\alpha)-\alpha^{1/4}.
+\mathrm{tr}\,M_2\ge\mathrm{tr}(A^{1/4})+f_2(\alpha)-\alpha^{1/4}.
 $$
 
 Label one occurrence of the minimum eigenvalue as $\lambda_1=\alpha$. M01 then gives
@@ -473,7 +473,7 @@ $$
 
 then $J(K)=B_n$.
 
-**Proof.** Every $\mathcal E(a,A)\subset K$ satisfies $u_i^{\mathsf T}a+\|Au_i\|\le1$ and $u_i^{\mathsf T}Au_i\le\|Au_i\|$. Taking weighted sums gives $\mathop{\mathrm{tr}}A\le\sum_i c_i=n$, so $\det A\le(\mathop{\mathrm{tr}}A/n)^n\le1$. The unit ball is feasible, and uniqueness follows from G03.
+**Proof.** Every $\mathcal E(a,A)\subset K$ satisfies $u_i^{\mathsf T}a+\|Au_i\|\le1$ and $u_i^{\mathsf T}Au_i\le\|Au_i\|$. Taking weighted sums gives $\mathrm{tr}\,A\le\sum_i c_i=n$, so $\det A\le(\mathrm{tr}\,A/n)^n\le1$. The unit ball is feasible, and uniqueness follows from G03.
 
 ### C02: Explicit cones
 
@@ -498,7 +498,7 @@ Take $H_n=\{t\le0\}$ and
 
 $$
 E_n=-\frac12e_1+
-\mathop{\mathrm{diag}}\left(\frac12,\sqrt{\frac n{n-1}},\ldots,\sqrt{\frac n{n-1}}\right)B_n.
+\mathrm{diag}\left(\frac12,\sqrt{\frac n{n-1}},\ldots,\sqrt{\frac n{n-1}}\right)B_n.
 $$
 
 Its first coordinate lies in $[-1,0]$. For every unit transverse vector $v$, its support function in the corresponding side-normal direction is
@@ -516,7 +516,7 @@ By feasibility and G01,
 
 $$
 \frac{w(K_n\cap H_n)}{w(K_n)}
-\ge\frac{\mathop{\mathrm{vol}}_n(E_n)}{\kappa_n}
+\ge\frac{\mathrm{vol}_n(E_n)}{\kappa_n}
 =\frac12\left(1+\frac1{n-1}\right)^{(n-1)/2}
 \longrightarrow\frac{\sqrt e}{2}.
 $$
@@ -573,12 +573,12 @@ The last step uses the fact that $\lambda^2/((m/\alpha^2)\lambda^2+s)$ is increa
 Let $N=M+tbb^{\mathsf T}$. By (M02.1), interchange of trace with finite-dimensional integration, and integration by parts,
 
 $$
-\mathop{\mathrm{tr}}(N^p)-\mathop{\mathrm{tr}}(M^p)
+\mathrm{tr}(N^p)-\mathrm{tr}(M^p)
 =p c_p\int_0^\infty s^{p-1}
 \log\left(1+t\,b^{\mathsf T}(M+sI)^{-1}b\right)\,ds.
 $$
 
-More explicitly, let $L(s)=\log\det(N+sI)-\log\det(M+sI)$. Diagonalizing the fixed matrices $M$ and $N$ separately gives $L'(s)=\mathop{\mathrm{tr}}(N+sI)^{-1}-\mathop{\mathrm{tr}}(M+sI)^{-1}$. Taking the difference of traces yields $-c_p\int_0^\infty s^pL'(s)\,ds$, and integration by parts gives $p c_p\int_0^\infty s^{p-1}L(s)\,ds$.
+More explicitly, let $L(s)=\log\det(N+sI)-\log\det(M+sI)$. Diagonalizing the fixed matrices $M$ and $N$ separately gives $L'(s)=\mathrm{tr}(N+sI)^{-1}-\mathrm{tr}(M+sI)^{-1}$. Taking the difference of traces yields $-c_p\int_0^\infty s^pL'(s)\,ds$, and integration by parts gives $p c_p\int_0^\infty s^{p-1}L(s)\,ds$.
 
 For an invertible matrix $Q$, multilinearity of the determinant in its columns gives $\det(I+vw^{\mathsf T})=1+w^{\mathsf T}v$: terms with two or more perturbed columns vanish because those columns are proportional, and the single-column terms sum to $w^{\mathsf T}v$. Taking $Q=M+sI$, $v=tQ^{-1}b$, and $w=b$, we obtain
 
@@ -595,7 +595,7 @@ $$
 The boundary terms vanish: $L(s)$ has a finite limit as $s\downarrow0$, and $L(s)=O(s^{-1})$ as $s\to\infty$, while $0<p<1$. The quadratic-form lower bound above and monotonicity of the logarithm therefore give
 
 $$
-\mathop{\mathrm{tr}}(N^p)-\mathop{\mathrm{tr}}(M^p)
+\mathrm{tr}(N^p)-\mathrm{tr}(M^p)
 \ge p c_p\int_0^\infty s^{p-1}
 \log\left(1+\frac{t\alpha^2}{m+s}\right)\,ds
 =(m+t\alpha^2)^p-m^p,
