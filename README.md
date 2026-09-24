@@ -4,6 +4,8 @@ This repository records a Lean 4 formalization of a spectral proof of Khachiyanâ
 
 For every positive-dimensional convex body, a closed halfspace through the center of its maximum-volume inscribed ellipsoid retains at most $\sqrt e/2$ of the maximum inscribed-ellipsoid volume. The constant is optimal uniformly over dimensions.
 
+Full arXiv report: [A Spectral Proof of Khachiyan's Ellipsoid Conjecture](https://arxiv.org/abs/2609.28447)
+
 The formalization includes existence and uniqueness of the maximal ellipsoid, affine normalization, the determinant-to-volume bridge, explicit cones proving sharpness, finite-dimensional nonattainment, the exact one-dimensional ratio, near-equality constraints, and iteration bounds for central cuts. It also contains two independent proofs of the general rank-one matrix inequality.
 
 ## Main declarations
